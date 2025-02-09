@@ -1,27 +1,12 @@
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
-         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
          version="3.0">
-
     <servlet>
-        <servlet-name>BarcodeServlet</servlet-name>
-        <servlet-class>org.krysalis.barcode4j.servlet.BarcodeServlet</servlet-class>
+        <servlet-name>TemperatureConverterServlet</servlet-name>
+        <servlet-class>fr.adriencaubel.controller.TemperatureConverterServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>BarcodeServlet</servlet-name>
-        <url-pattern>/barcode</url-pattern>
+        <servlet-name>TemperatureConverterServlet</servlet-name>
+        <url-pattern>/convert</url-pattern>
     </servlet-mapping>
-
-    <servlet>
-        <servlet-name>ProductServlet</servlet-name>
-        <servlet-class>fr.adriencaubel.ProductServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>ProductServlet</servlet-name>
-        <url-pattern>/submitProduct</url-pattern>
-    </servlet-mapping>
-
 </web-app>
