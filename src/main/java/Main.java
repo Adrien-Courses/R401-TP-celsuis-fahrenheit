@@ -1,4 +1,5 @@
 import fr.adriencaubel.controller.HelloServlet;
+import fr.adriencaubel.controller.TemperatureConverterServlet;
 import org.apache.catalina.Context;
 import org.apache.catalina.LifecycleException;
 import org.apache.catalina.startup.Tomcat;
@@ -19,6 +20,10 @@ public class Main {
 
         Tomcat.addServlet(ctx, "hello", new HelloServlet());
         ctx.addServletMappingDecoded("/hello", "hello");
+
+        Tomcat.addServlet(ctx, "convert", new TemperatureConverterServlet());
+        ctx.addServletMappingDecoded("/convert", "convert");
+
 
         System.out.println("App running at: http://localhost:8810/");
 
