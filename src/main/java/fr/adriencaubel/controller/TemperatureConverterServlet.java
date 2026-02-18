@@ -26,7 +26,7 @@ public class TemperatureConverterServlet extends HttpServlet {
 		request.setAttribute("result", Double.toString(conversion));
 
 		// redirection vers la Vue result.jsp
-		// response.sendRedirect("result?result=" + conversion);
+		//response.sendRedirect("result.jsp");
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
 		requestDispatcher.forward(request, response);
 
